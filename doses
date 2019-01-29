@@ -1,0 +1,30 @@
+import math                         #makes sqrt function from math library available
+ 
+def BSA():                          #calculates the body surface area which can be called in later programs
+         print ("This program calculates body surface area and corrects the doses of anti-cancer drugs as outputs")
+      print ()
+         W = float (input("Please enter weight pounds= "))    #float allows entering integers and/or decimals values
+         H = float (input("Please enter height centimeters= "))
+           bsa = (W*H)
+           bsa = bsa/3600
+           bsa = math.sqrt ((bsa))
+return (BSA)
+
+def main():                        #imports & exports the user defined file 
+         infilename = input ("Give name of the input file : ")
+         outfilename = output ("Give name of the output file : ")
+   bsa = BSA()                     #calls the BSA 
+         final []
+         infile = open (infilename, "r")
+         outfile = open (outfilename, "w")
+         
+for line in infile:              #reads every line from the infile 
+    newline new_line = line.strip().replace(" ","").split("-")	#strips blank spaces, replacing , and split
+		new_bsa = (bsa/1.73)*int(new_line[1][0:-2])
+		final.append(new_line[0]+" - "+str(round(new_bsa,2))+"mg") # appends the line to decimal 2 integer.
+	
+for item in final:
+		outfile.write("%s\n" % item)    
+
+outfile.close()        #closes outfile 
+main()
